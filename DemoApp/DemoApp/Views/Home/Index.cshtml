@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title ng-bind="name"></title>
+ 
+    @*<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>*@
+    
+   
+    @Scripts.Render("~/bundles/MyApp")
+</head>
+<body ng-controller="IndexController">
+
+    <input type="text" ng-model="name" />
+    <h1>{{name}}</h1>
+    <button ng-click="getData()">GetData</button>
+    <ul>
+        <li><a href="/#/routeOne">Route One</a></li>
+        <li><a href="/#/routeTwo">Route Two</a></li>
+        <li><a href="/#/routeThree">Route Three</a></li>
+    </ul>
+    <p id="myParagraph"></p>
+    <ng-view></ng-view>
+    
+
+    @*<script>
+        $(function () {
+            var myHub = $.connection.myHub;
+            myHub.client.getNewData = function (name) {
+                $("<span>" + name + "</span > ").appendTo("p");
+            }
+
+            $.connection.hub.start().done(function () {
+                myHub.server.sendData();
+            });
+        });
+
+
+
+    </script>*@
+
+
+</body>
+</html>
