@@ -13,18 +13,18 @@ interface IIndexController {
 
 class IndexController implements IIndexController {
 
-    constructor(private $scope: IIndexControllerScope) {
+    constructor(private $scope: IIndexControllerScope, private HubService) {
         this.$scope.name = "Asif Khan";
-        //this.$scope.getData = () => this.getData();
+        this.$scope.getData = () => this.getData();
     }
 
-    //getData() {
-    //    this.hubService.sendData();
-    //}
+    getData() {
+        this.HubService.sendData();
+    }
 
 }
 
-app.controller('IndexController', ['$scope',($scope) => {
-    return new IndexController($scope);
+app.controller('IndexController', ['$scope', 'HubService', ($scope, HubService) => {
+    return new IndexController($scope, HubService);
 }]);
 

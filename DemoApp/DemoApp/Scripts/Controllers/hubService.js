@@ -1,7 +1,7 @@
 var HubService = (function () {
-    function HubService($scope) {
-        this.hub = $.hubConnection('MyHub');
-        this.hubProxy = this.hub.createHubProxy('MyHub');
+    function HubService() {
+        this.hub = $.hubConnection('/myHub');
+        this.hubProxy = this.hub.createHubProxy('myHub');
         this.registerProxy();
         this.startHub();
     }
@@ -21,6 +21,6 @@ var HubService = (function () {
     };
     return HubService;
 }());
-app.service('HubService', ['$scope', function ($scope) {
-        return new HubService($scope);
-    }]);
+app.factory('HubService', function () {
+    return new HubService();
+});

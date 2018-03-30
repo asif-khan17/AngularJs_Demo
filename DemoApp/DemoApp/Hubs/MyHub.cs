@@ -11,7 +11,7 @@ namespace DemoApp.Hubs
 
         public void SendData()
         {
-            Clients.All.getNewData("My name is khan and I am not a terrorist");
+            Clients.All.getData("My name is khan and I am not a terrorist");
         }
 
     }

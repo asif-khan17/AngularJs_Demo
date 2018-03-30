@@ -13,5 +13,4 @@ myApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'routesDemo/Two'
             //controller: 'routeDemoSecondController'
         });
-
 }]);   

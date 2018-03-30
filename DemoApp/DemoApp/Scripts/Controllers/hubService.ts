@@ -5,10 +5,10 @@
 class HubService {
     hubProxy: HubProxy;
     hub: HubConnection;
-    constructor($scope) {
-         this.hub = $.hubConnection('MyHub');
+    constructor() {
+         this.hub = $.hubConnection('/myHub');
         
-         this.hubProxy = this.hub.createHubProxy('MyHub');
+         this.hubProxy = this.hub.createHubProxy('myHub');
          this.registerProxy();
          this.startHub();
     }
@@ -31,6 +31,6 @@ class HubService {
         return data;
     }
 }
-app.service('HubService', ['$scope', ($scope) => {
-    return new HubService($scope);
-}]);
+app.factory('HubService', () => {
+    return new HubService();
+});
