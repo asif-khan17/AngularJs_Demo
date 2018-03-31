@@ -231,6 +231,7 @@
     <TypeScriptCompile Include="Scripts\app.ts" />
     <TypeScriptCompile Include="Scripts\Controllers\hubService.ts" />
     <TypeScriptCompile Include="Scripts\Controllers\indexController.ts" />
+    <TypeScriptCompile Include="Scripts\Controllers\myDirective.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
