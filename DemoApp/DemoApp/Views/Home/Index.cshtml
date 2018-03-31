@@ -22,24 +22,35 @@
         <li><a href="/#/routeThree">Route Three</a></li>
     </ul>
     <p id="myParagraph"></p>
+
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+    <svg width="400" height="110">
+        <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,255)" />
+    </svg>
+    <svg height="200" width="500">
+        <polyline points="20,20 40,25 60,40 80,120 120,140 200,180 "
+                  style="fill:none;stroke:black;stroke-width:3" />
+    </svg>
     <ng-view></ng-view>
-    
+
 
     @*<script>
-        $(function () {
-            var myHub = $.connection.myHub;
-            myHub.client.getNewData = function (name) {
-                $("<span>" + name + "</span > ").appendTo("p");
-            }
+            $(function () {
+                var myHub = $.connection.myHub;
+                myHub.client.getNewData = function (name) {
+                    $("<span>" + name + "</span > ").appendTo("p");
+                }
 
-            $.connection.hub.start().done(function () {
-                myHub.server.sendData();
+                $.connection.hub.start().done(function () {
+                    myHub.server.sendData();
+                });
             });
-        });
 
 
 
-    </script>*@
+        </script>*@
 
     @Scripts.Render("~/bundles/MyApp")
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>

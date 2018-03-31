@@ -8,7 +8,7 @@ class HubService {
     constructor() {
          this.hub = $.hubConnection('/myHub');
         
-         this.hubProxy = this.hub.createHubProxy('myHub');
+         this.hubProxy = this.hub.createHubProxy('selfHub');
          this.registerProxy();
          this.startHub();
     }

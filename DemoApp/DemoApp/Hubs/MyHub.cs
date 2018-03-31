@@ -6,7 +6,7 @@ using System.Web;
 
 namespace DemoApp.Hubs
 {
-    public class MyHub : Hub
+    public class SelfHub : Hub
     {
 
         public void SendData()
